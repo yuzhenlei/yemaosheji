@@ -1,0 +1,498 @@
+<!-- //2019 owlling -->
+<!DOCTYPE html>
+
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>关于夜猫子</title>
+    <link rel="shortcut icon" href="./icon/favicon.ico">
+    <link rel="apple-touch-icon" href="./icon/favicon.ico">
+    <link rel="ico" href="./icon/favicon.ico">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+    <link rel="stylesheet" type="text/css" href="./css/style.css">
+    <link rel="stylesheet" type="text/css" href="./css/font-awesome.css">
+    <link rel="stylesheet" href="./css/share_style1_24.css">
+    <link rel="stylesheet" href="./css/share_popup.css">
+    <link rel="stylesheet" href="./css/select_share.css">
+    <link rel="stylesheet" href="./css/poposlides.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <style>
+        body {
+            font-family: 'Raleway', sans-serif;
+        }
+    </style>
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script src="./js/jquery.min.js" type="text/javascript"></script>
+    <script src="./js/share.js"></script>
+    <script src="./js/huojian/jquery.min.js"></script>
+    <script src="./js/huojian/TweenMax.min.js"></script>
+    <script src="./js/huojian/ScrollToPlugin.min.js"></script>
+
+
+    <script type="text/javascript">
+        /* 鼠标特效 */
+        var a_idx = 0;
+        document.ready = function() {
+            $("body").click(function(e) {
+                var a = new Array("加油！", );
+                var $i = $("<span/>").text(a[a_idx]);
+                a_idx = (a_idx + 1) % a.length;
+                var x = e.pageX,
+                    y = e.pageY;
+                $i.css({
+                    "z-index": 9999,
+                    "top": y - 24,
+                    "left": x,
+                    "position": "absolute",
+                    "font-weight": "bold",
+                    "font-size": "18px",
+                    "color": "#6E767D"
+                });
+                $("body").append($i);
+                $i.animate({
+                        "top": y - 140,
+                        "opacity": 0
+                    },
+                    1500,
+                    function() {
+                        $i.remove();
+                    });
+            });
+        };
+    </script>
+
+
+    <script>
+        $(function() {
+
+            // 返回顶部，绑定gotop1图标和gotop2文字事件
+            $("#gotop1,#gotop2").click(function(e) {
+                TweenMax.to(window, 1.5, {
+                    scrollTo: 0,
+                    ease: Expo.easeInOut
+                });
+                var huojian = new TimelineLite();
+                huojian.to("#gotop1", 1, {
+                        rotationY: 720,
+                        scale: 0.6,
+                        y: "+=40",
+                        ease: Power4.easeOut
+                    })
+                    .to("#gotop1", 1, {
+                        y: -1000,
+                        opacity: 0,
+                        ease: Power4.easeOut
+                    }, 0.6)
+                    .to("#gotop1", 1, {
+                        y: 0,
+                        rotationY: 0,
+                        opacity: 1,
+                        scale: 1,
+                        ease: Expo.easeOut,
+                        clearProps: "all"
+                    }, "1.4");
+            });
+        });
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if ($(this).scrollTop() != 0) {
+                    $('#toTop').fadeIn();
+                } else {
+                    $('#toTop').fadeOut();
+                }
+            });
+            $('#toTop').click(function() {
+                $('body,html').animate({
+                    scrollTop: 0
+                }, 500);
+            });
+        });
+    </script>
+
+    <!-- //闪闪发光 -->
+    <script type="text/javascript">
+        window.carbonLoaded = false;
+        window.helloCarbon = function() {
+            window.carbonLoaded = true;
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            var $menuHello = document.getElementById('menuHello');
+            var $huggingFace = document.getElementById('huggingFace');
+            //var $carbon = document.getElementById('carbon');
+
+            setTimeout(function() {
+                if (window.carbonLoaded) {
+                    $menuHello.style.minHeight = '218px';
+                    $huggingFace.style.display = 'none';
+                    $carbon.style.display = 'block';
+                } else {
+                    $menuHello.style.minHeight = '0';
+                    $huggingFace.style.display = 'block';
+                    //$carbon.style.display = 'none';
+                }
+            }, 0);
+        });
+    </script>
+
+    <script language="javascript">
+        function changeColor() {
+            var color = "#A8B2BA90|#A8B2BA80|#A8B2BA70|#A8B2BA60|#A8B2BA50|#A8B2BA40|#A70707|#D3B500|#005596|#039E7B";
+            color = color.split("|");
+            document.getElementById("blink").style.color = color[parseInt(Math.random() * color.length)];
+        }
+        setInterval("changeColor()", 200);
+    </script>
+
+</head>
+
+<body>
+
+    <aside class="menu">
+        <header class="menu-header">
+
+            <a id="logo" class="menu-logo" href="../index.html">
+
+                <img class="menu-logo-icon" src="./icon/logo3.svg">
+
+            </a>
+
+        </header>
+
+        <nav id="menu-nav" class="menu-nav">
+            <div id="menu-list" class="menu-list">
+                <ul id="menu-list-ul" class="menu-list-ul sidebar-menu">
+
+                    <li>
+                        <a href="#关于夜猫子">
+                            <span>关于夜猫子</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#联系站长">
+                            <span>联系站长</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#Daydayup">
+                            <span>Daydayup</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#更新日志">
+                            <span>更新日志</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#捐赠">
+                            <span>捐赠</span>
+                        </a>
+                    </li>
+                    <div class="menu3">
+                        <div class="menu-header">
+                            <img src="./icon/ill1.svg">
+                        </div>
+                    </div>
+                    <div class="menu42">
+                        <div class="menu-header"><i class="fa fa-snowflake-o fa-spin"></i></div>
+                    </div>
+                </ul>
+
+            </div>
+        </nav>
+        <footer id="menuHello" class="menu-hello">
+            <div id="huggingFace">
+                <a href="../index.html">
+                    夜猫设计导航
+                </a><br>
+                <p></p>
+                <a href="../yemao_files/daydayup.html">
+                    Daydayup
+                </a>
+                <br>
+            </div>
+
+        </footer>
+    </aside>
+
+    <!-- 右侧小火箭图标返回顶部 -->
+    <div id="toTop">
+        <span id="gotop1">
+                    <img src="./icon/huojian.svg" alt="返回顶部小火箭">
+                </span>
+    </div>
+
+
+    <!--内容区-->
+    <main class="main">
+
+        <div class="container-fluid">
+
+            <div class="menuowl">
+                <img src="./icon/logo2.svg">
+            </div>
+
+            <div class="alert alert-warning l_massage" role="alert">
+                <p class="fa fa-podcast"><a href="../yemao_files/announcement.html" target="_blank">
+                    &nbsp  [ 新站上线 ]&nbsp&nbsp 夜猫设计导航上线啦 &nbsp&nbsp👋 设计资源正在加急更新中... </a> </p>
+            </div>
+            <div id="关于夜猫子" class="panel">
+                <span class="btext">关于夜猫子</span>
+                <p class="stext">欢迎使用夜猫设计导航！
+                </p>
+                <p class="stext">本网站由<a style="color:#A8B2BA" href="http://www.owlling.com/" target="_blank">
+                    Owlling
+                </a>独立开发运营，站长会定期更新网址资源，并且每天会更新<a style="color:#A8B2BA" href="../yemao_files/daydayup.html">
+                    Daydayup
+                </a>学习日志。
+                </p>
+                <p class="stext">为什么要做这个网站呢，随着Chrome收藏夹的增加，我发现在浏览器里收藏网址再进行分类使用起来可能并没有那么方便，并且随着网址越来越多很多漂亮的资源并不会被关注。 </p>
+
+                <p class="stext">所以，我想把网址都整合到一个网站上来，也能供大家使用。</p>
+
+                <p class="stext">网址根据做设计以来的学习线路和使用习惯来进行分类：由早读、灵感、产品、交互、设计、资源、工具、数据、前端、大牛、酷站，进行分类。</p>
+
+                <p class="stext">希望能够帮助到你，如果你也有更酷的网址也可以
+                    <a style="color:#A8B2BA" href="../yemao_files/input.html" target="_blank">推荐给站长</a>。</p>
+
+                <p class="stext">━━
+                </p>
+
+            </div>
+            <div id="联系站长" class="panel">
+
+                <span class="btext">联系站长</span>
+                <p class="stext">站长也是一位设计小学生，希望能和你成为朋友，一起加油。</p>
+                <p class="stext">站长个人主页<a style="color:#A8B2BA" href="http://www.owlling.com/" target="_blank">
+                    owlling.com
+                </a> &nbsp&nbsp&nbsp Twitter<a style="color:#A8B2BA" href="https://twitter.com/lingxianyijun" target="_blank">
+                    @lingxianyijun
+                </a> &nbsp&nbsp&nbsp 新浪微博<a style="color:#A8B2BA" href="https://weibo.com/520bobodiy/" target="_blank">
+                    @owl_ling
+                </a> </p>
+                <p class="stext">这里有一个有趣的设计公众号和交流群，也可以直接加站长微信，欢迎交流。</p>
+                <div class="qrcode">
+                    <img src="./icon/qrcode.svg">
+                </div>
+                <p class="stext">一起学习&nbsp&nbsp Day day up ！</p>
+                <br>
+
+            </div>
+
+            <div id="Daydayup" class="panel">
+
+                <span class="btext">Daydayup</span>
+                <p class="stext">任何优秀都离不开时间的磨砺，设计亦是。每天学习一点点，坚持下去，越努力，越优秀！</p>
+                <p class="stext">Daydayup是运营于公众号<a style="color:#A8B2BA" href="about.html#联系站长">
+                    [ 夜猫设计话 ]
+                </a>的一栏，为了方便大家在使用网站时能够浏览近期内容特把本周内容移植进来供大家阅读。</p>
+                <br>
+                <p class="stext" style="color: #A8B2BA;font-size: 16px;font-weight: 600">Today</p>
+                <div class="today">
+                    <img src="./daydayup/0.png">
+                </div>
+                <br>
+                <p class="stext">
+                    <a href="../yemao_files/daydayup.html">
+                        <i class="fa fa-space-shuttle"></i>查看更多往期内容
+                    </a>
+                </p>
+                <br>
+
+            </div>
+
+            <div id="更新日志" class="panel">
+
+                <span class="btext">更新日志</span>
+                <p class="stext">
+                    <a>
+                        <i class="fa fa-terminal"></i>待更新 ...&nbsp&nbsp
+                    </a>
+                    <i class="stext" id="blink"><i class="fa fa-universal-access fa-spin"></i></i>
+                </p>
+                <br>
+                <p class="stext">
+                    <a>
+                        <i class="fa fa-terminal"></i>...
+                    </a>
+                </p>
+                <br>
+                <p class="stext">
+                    <a>
+                        <i class="fa fa-terminal"></i>...
+                    </a>
+                </p>
+                <br>
+                <p class="stext">
+                    <a>
+                        <i class="fa fa-terminal"></i>2019年8月20日
+                    </a>
+                </p>
+                <p class="stext">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</i>开启 <a style="color:#A8B2BA" href="../yemao_files/daydayup.html">
+                    Daydayup
+                </a></p>
+                <p class="stext">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</i>更新网址资源280个 .</p>
+                <br>
+                <p class="stext">
+                    <a>
+                        <i class="fa fa-terminal"></i>2019年8月16日
+                    </a>
+                </p>
+                <p class="stext">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</i>网站上线 .</p>
+                <br>
+                <p class="stext">
+                    <a>
+                        <i class="fa fa-terminal"></i>2019年8月13日
+                    </a>
+                </p>
+                <p class="stext">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</i>注册域名 <a style="color:#A8B2BA" href="https://www.yemaosheji.com/">
+                    Yemaosheji.com
+                </a></p>
+                <br>
+                <p class="stext">
+                    <a>
+                        <i class="fa fa-terminal"></i>2019年8月8日
+                    </a>
+                </p>
+                <p class="stext">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp</i>网站规划 进入开发阶段 .</p>
+                <br>
+
+            </div>
+            <div id="捐赠" class="panel">
+
+                <span class="btext">捐赠</span>
+                <p class="stext">此刻，像一只可怜猫儿。</p>
+                <p class="stext">如果夜猫儿对你有所帮助欢迎向身边的人推荐，如果你还能贡献一点爱心鼓励站长继续努力维护站点，那更感激不尽 <i class="fa fa-gittip"></i></p>
+                <p class="stext">捐赠金额多少不限，捐赠完成后希望能加<a style="color:#A8B2BA" href="about.html#联系站长">站长微信</a>，容站长给你道声感谢，也避免捐赠信息丢失。你还可以告诉站长你的相关链接，让更多人了解你。
+                </p>
+                <div class="qrcode">
+                    <img src="./icon/qrcode3.svg">
+                </div>
+                <br>
+                <p class="stext">&nbsp&nbsp<i class="fa fa-signing"></i><i class="fa fa-signing"></i><i class="fa fa-signing"></i><i class="fa fa-signing"></i><i class="fa fa-signing"></i><i class="fa fa-signing"></i></p>
+                <br>
+                <hr color=#101216 width="100%" /><br><br>
+                <p class="stext" style="color: #A8B2BA;font-size: 18px;font-weight: 600">感谢这些可爱的仁儿 扶我起来 <i class="fa fa-wheelchair-alt"></i>
+                </p>
+                <hr color=#101216 width="100%" />
+
+                <!-- 这群可爱的仁， ， -->
+                <div class="row">
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://weibo.com/" target="_blank">
+                            <div class="l_box2">
+                                <div class="web-jzzbh">
+                                    是一只伟大的小猫
+                                </div>
+                                <div class="web-jzzl">
+                                    捐赠：¥10
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a>
+                            <div class="l_boxnoh">
+                                <div class="web-jzzb">
+                                    花**
+                                </div>
+                                <div class="web-jzzl">
+                                    捐赠：¥16
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a>
+                            <div class="l_boxnoh">
+                                <div class="web-jzzb">
+                                    Meng*
+                                </div>
+                                <div class="web-jzzl">
+                                    捐赠：¥9.9
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a>
+                            <div class="l_boxnoh">
+                                <div class="web-jzzb">
+                                    刘**
+                                </div>
+                                <div class="web-jzzl">
+                                    捐赠：¥16
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a>
+                            <div class="l_boxnoh">
+                                <div class="web-jzzb">
+                                    张**
+                                </div>
+                                <div class="web-jzzl">
+                                    捐赠：¥29.9
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a href="https://weibo.com/" target="_blank">
+                            <div class="l_box2">
+                                <div class="web-jzzbh">
+                                    阳麻麻的树
+                                </div>
+                                <div class="web-jzzl">
+                                    捐赠：¥9.9
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-sm-6 col-md-4 col-lg-3">
+                        <a>
+                            <div class="l_boxnoh">
+                                <div class="web-jzzb">
+                                    杨**
+                                </div>
+                                <div class="web-jzzl">
+                                    捐赠：¥12
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!--  结束 -->
+
+            </div>
+            <div class="slides-box2">
+                <ul class="slides2">
+                    <p>
+                        <li style="background: url( './banner/4.svg') center "></li>
+                    </p>
+                </ul>
+            </div>
+
+    </main>
+    <!--内容区-->
+
+</body>
+
+<footer class="footer">
+    <br><br>
+    <p class="footer-title">
+        <small>© 2019 </small>&nbsp<a href="../index.html">夜猫设计导航</a>
+        <small>Powered by</small>&nbsp<a href="http://www.owlling.com/" target="_blank">Owlling</a>
+    </p>
+    <p class="footer-title">
+        <small><i class="fa fa-plus-square fa-spin" style="margin-right: 6px;"></i>设计交流QQ群 </small>&nbsp<a href="about.html#联系站长">592157553</a>&nbsp&nbsp&nbsp<small>微信公众号 </small>&nbsp<a href="about.html#联系站长">夜猫设计话</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+        <small>如果你还有更赞的 也可以</small>&nbsp<a href="../yemao_files/input.html" target="_blank">推荐站点</a>&nbsp<a href="about.html#联系站长">联系站长</a>
+    </p>
+</footer>
